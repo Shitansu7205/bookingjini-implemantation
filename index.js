@@ -305,7 +305,7 @@ noOfPoc,
     // Send the email with the form data and attachments
     const mailOptions = {
       from: contactEmail, // Use the contact email from the form
-      to: 'shitansukumargochhayat@gmail.com ', // The recipient email address
+      to: 'shitansukumargochhayat@gmail.com  , bookingjiniimplementation@gmail.com', // The recipient email address
       subject: `IMPLEMENTATION & SUPPORT DETAILS [ ***---- ${companyName}----*** ]`,
       html: emailBody,
       attachments: imageFiles
