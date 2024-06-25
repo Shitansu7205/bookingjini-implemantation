@@ -26,6 +26,21 @@ app.post('/submit', upload.fields([
   { name: 'roomImages2', maxCount: 10 },
   { name: 'roomImages3', maxCount: 10 },
   { name: 'roomImages4', maxCount: 10 },
+  { name: 'roomImages5', maxCount: 10 },
+  { name: 'roomImages6', maxCount: 10 },
+  { name: 'roomImages7', maxCount: 10 },
+  { name: 'roomImages8', maxCount: 10 },
+  { name: 'roomImages9', maxCount: 10 },
+  { name: 'roomImages10', maxCount: 10 },
+
+
+
+
+
+
+
+
+
   { name: 'contractForm', maxCount: 10 },
   { name: 'cancelledCheque', maxCount: 10 },
   { name: 'eBill', maxCount: 10 },
@@ -121,7 +136,7 @@ app.post('/submit', upload.fields([
       domainId,
       domainPassword,
       hostUrl,
-      domainUrl,
+      domainUrl,  
       developerNo,
       // ************ website details section ends here**********
 
@@ -163,7 +178,7 @@ noOfPoc,
 
    // Combine all uploaded images into a single array
    const allFiles = [];
-   ['roomImages1', 'roomImages2', 'roomImages3' , "images" ,'roomImages4' , 'contractForm', 'cancelledCheque', 'eBill', 'gstPdf', 'panPdf', 'letterHead', 'tradeLicence', 'itrPdf', 'logoPdf' ].forEach(key => {
+   ['roomImages1', 'roomImages2', 'roomImages3' ,  'roomImages5', 'roomImages6', 'roomImages7', 'roomImages8', 'roomImages9', 'roomImages10',  "images" ,'roomImages4' , 'contractForm', 'cancelledCheque', 'eBill', 'gstPdf', 'panPdf', 'letterHead', 'tradeLicence', 'itrPdf', 'logoPdf' ].forEach(key => {
      if (req.files[key]) {
        req.files[key].forEach(file => {
          allFiles.push(file);
@@ -305,7 +320,7 @@ noOfPoc,
     // Send the email with the form data and attachments
     const mailOptions = {
       from: contactEmail, // Use the contact email from the form
-      to: 'shitansukumargochhayat@gmail.com  , bookingjiniimplementation@gmail.com', // The recipient email address
+      to: 'shitansukumargochhayat@gmail.com  =', // The recipient email address
       subject: `IMPLEMENTATION & SUPPORT DETAILS [ ***---- ${companyName}----*** ]`,
       html: emailBody,
       attachments: imageFiles
